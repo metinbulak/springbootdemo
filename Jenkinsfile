@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registryCredential = "docker"
+    registryCredential = "metinbulak/demospringboot"
   }
   agent any
   stages {
