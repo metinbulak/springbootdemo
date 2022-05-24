@@ -22,10 +22,7 @@ pipeline {
       steps{
         script {
           
-		  docker.withRegistry( "", registryCredential ) {
-           // dockerImage.push()
-          app.push("latest")
-          }
+		  sh 'docker push metinbulak/demospringboot' 
         }
       }
     }
