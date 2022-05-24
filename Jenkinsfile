@@ -14,14 +14,15 @@ pipeline {
     stage(‘Load’) {
       steps{
         script {
-          app = docker.build("metinbulak/springbootdemo")
+          app = docker.build("metinbulak/demospringboot")
         }
       }
     }
      stage(‘Deploy’) {
       steps{
         script {
-          docker.withRegistry( "https://registry.hub.docker.com", registryCredential ) {
+          
+		  //docker.withRegistry( "https://registry.hub.docker.com", registryCredential ) {
            // dockerImage.push()
           app.push("latest")
           }
